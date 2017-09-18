@@ -1,0 +1,106 @@
+//preprocessor
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#include <string.h>
+
+int main(){
+	//kamus
+		int X, x;
+      int Y;
+   	int hasil;
+   	char lanjut[1];
+      int pilih;
+   //algoritma
+   	menu :
+      printf("\n\n============ Menghitung X dan Y ============\n\n");
+      printf("1. Menghitung X+Y \n");
+      printf("2. Menghitung X-Y \n");
+      printf("3. Menghitung X*Y \n");
+      printf("4. Menghitung X^Y \n");
+      printf("5. Menghitung f(x)=2x^2-3x+1 \n");
+      printf("6. Keluar \n");
+		printf("Pilih menu : ");scanf("%d", &pilih);
+
+      switch(pilih){
+      case 1 : clrscr();
+      			printf("\n========= Menghitung X+Y ==========\n");
+      			printf("Masukan nilai X : ");scanf("%d", &X);
+      			printf("Masukan nilai Y : ");scanf("%d", &Y);
+               hasil = X + Y ;
+               printf("Hasil = %d \n", hasil);
+               printf("Ingin lanjut[y/t]? ");scanf("%s", lanjut);
+               if(strcmp(lanjut,"y") == 0){
+                  goto menu;
+               }else if(strcmp(lanjut,"t")==0){
+                 goto keluar;
+               }
+
+      break;
+   	case 2 : clrscr();
+      			printf("\n========== Menghitung X - Y ==========\n");
+      			printf("Masukan nilai X : ");scanf("%d", &X);
+      			printf("Masukan nilai Y : ");scanf("%d", &Y);
+               hasil = X - Y;
+               printf("Hasil = %d\n", hasil);
+               printf("Ingin lanjut[y/t]? ");scanf("%s", lanjut);
+               if(strcmp(lanjut,"y") == 0){
+                  goto menu;
+               }else if(strcmp(lanjut,"t")==0){
+                 goto keluar;
+               }
+      break;
+      case 3 : clrscr();
+      			printf("\n========== Menghitung X * Y ==========\n");
+      			printf("Masukan nilai X : ");scanf("%d", &X);
+      			printf("Masukan nilai Y : ");scanf("%d", &Y);
+               hasil = X * Y;
+               printf("Hasil = %d\n", hasil);
+               printf("Ingin lanjut[y/t]? ");scanf("%s", lanjut);
+               if(strcmp(lanjut,"y") == 0){
+                  goto menu;
+               }else if(strcmp(lanjut,"t")==0){
+                 goto keluar;
+               }
+      break;
+      case 4 : clrscr();
+      			printf("\n========== Menghitung X ^ Y ==========\n");
+      			printf("Masukan nilai X : ");scanf("%d", &X);
+      			printf("Masukan nilai Y : ");scanf("%d", &Y);
+               hasil = pow(X,Y);
+               printf("Hasil = %d\n", hasil);
+               printf("Ingin lanjut[y/t]? ");scanf("%s", lanjut);
+               if(strcmp(lanjut,"y") == 0){
+                  goto menu;
+               }else if(strcmp(lanjut,"t")==0){
+                 goto keluar;
+               }
+      break;
+      case 5 : clrscr();
+      			printf("\n========== Menghitung f(x)=2x^2-3x+1 ==========\n");
+      			printf("Masukan nilai X : ");scanf("%d", &X);
+      			printf("Masukan nilai Y : ");scanf("%d", &Y);
+               for(x=X;x<=Y;x++){
+               	hasil = (2*(x*x))-((3*x)+1);
+               	printf("Hasil = %d\n", hasil);
+               }
+      			printf("Ingin lanjut[y/t]? ");scanf("%s", lanjut);
+              if(strcmp(lanjut,"y") == 0){
+                  goto menu;
+               }else if(strcmp(lanjut,"t")==0){
+                 goto keluar;
+               }
+      break;
+      case 6 : keluar :
+      printf("Terimakasih ..... ");
+      break;
+      default : printf("Menu yang anda pilih tidak ada");
+		}
+
+getch();
+return 0;
+}
+
+
+
+
